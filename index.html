@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <style>
+        input {
+            border: none;
+            outline: none;
+            font-weight: bold;
+            padding: 8px 22px;
+            box-shadow: 0 2px 7px 1px black;
+        }
+
+        .timer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mint,
+        .sec {
+            padding: 20px 30px;
+            background-color: rgb(23, 74, 94);
+            color: white;
+            margin: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .d-dot {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <h2 class="text-center">Stop Watch</h2>
+        </div>
+        <div class="container">
+            <div class="container input-box text-center">
+                <input type="number" id="input" value="" placeholder="Enter time in minutes" class="m-3" min="0">
+                <!-- putting minimum value so user cant put any nagative number  -->
+                
+                <div class="start-t-btn mb-3">
+                    <button id="button" class="btn btn-primary">Start Timer</button>
+                </div>
+                <div class="reset-btn mb-3">
+                    <button id="reset" class="btn btn-danger">reset</button>
+                </div>
+            </div>
+
+            <div class="timer text-center">
+                <div class="mint" id="mint">00</div>
+                <div class="d-dot"> : </div>
+                <div class="sec" id="sec">00</div>
+            </div>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
